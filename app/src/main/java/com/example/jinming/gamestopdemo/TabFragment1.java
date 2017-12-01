@@ -73,37 +73,6 @@ public class TabFragment1 extends Fragment {
         });
     }
 
-    private void updateButtonText(final Button btn) {
-        Handler handler = new Handler(Looper.getMainLooper());
-        handler.post(new Runnable() {
-            @Override
-            public void run() {
-                btn.setText(R.string.btn_find);
-            }
-        });
-    }
-
-    private void runThread(final Button btn) {
-        new Thread() {
-            public void run() {
-                int i = 0;
-                while (i++ < 1000) {
-                    try {
-                        getActivity().runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                btn.setText(R.string.btn_find);
-                            }
-                        });
-                        Thread.sleep(300);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        }.start();
-    }
-
     private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
         int numOfTabs;
 
@@ -146,4 +115,36 @@ public class TabFragment1 extends Fragment {
             return NUM_PAGES;
         }
     }
+
+
+//    private void updateButtonText(final Button btn) {
+//        Handler handler = new Handler(Looper.getMainLooper());
+//        handler.post(new Runnable() {
+//            @Override
+//            public void run() {
+//                btn.setText(R.string.btn_find);
+//            }
+//        });
+//    }
+//
+//    private void runThread(final Button btn) {
+//        new Thread() {
+//            public void run() {
+//                int i = 0;
+//                while (i++ < 1000) {
+//                    try {
+//                        getActivity().runOnUiThread(new Runnable() {
+//                            @Override
+//                            public void run() {
+//                                btn.setText(R.string.btn_find);
+//                            }
+//                        });
+//                        Thread.sleep(300);
+//                    } catch (InterruptedException e) {
+//                        e.printStackTrace();
+//                    }
+//                }
+//            }
+//        }.start();
+//    }
 }

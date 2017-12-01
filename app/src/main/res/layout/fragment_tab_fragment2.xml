@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
     tools:context="com.example.jinming.gamestopdemo.TabFragment2">
 
     <!-- TODO: Update blank fragment layout -->
@@ -15,8 +16,9 @@
         android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="We buy your games, electronics and more for cash or credit."
-        android:textSize="24sp"
+        android:textColor="@android:color/white"
 
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

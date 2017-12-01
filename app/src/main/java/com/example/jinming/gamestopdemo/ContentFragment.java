@@ -83,7 +83,7 @@ public class ContentFragment extends Fragment {
 
     private void setViewPager() {
         Log.d("VIEWPAGER", "setViewPager");
-        adapter = new PagerAdapter(getActivity().getSupportFragmentManager(), tabLayout.getTabCount());
+        adapter = new PagerAdapter(getActivity().getSupportFragmentManager(), tabLayout.getTabCount(), getView());
         viewPager.setAdapter(adapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
     }

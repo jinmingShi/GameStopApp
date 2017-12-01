@@ -14,10 +14,11 @@ public class UtilArray {
                                     R.drawable.news,
                                     R.drawable.message,
                                     R.drawable.setting,
-                                    R.drawable.about};
+                                    R.drawable.about,
+                                    R.drawable.logout};
     private static final String[] names = {"SIGN IN", "POWERUP REWARDS",
                                            "GAME INFORMER NEWS", "MESSAGES",
-                                           "SETTINGS", "ABOUT/FEEDBACK"};
+                                           "SETTINGS", "ABOUT/FEEDBACK", "LOGOUT"};
 
     private static final String[] titles = {"MY SAVED SEARCHES", "COMING SOON", "GAMES", "CONSOLES", "ELECTRONICS", "ACCESSORIES"};
 

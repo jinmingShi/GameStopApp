@@ -4,6 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.util.Log;
+import android.view.View;
 
 import com.example.jinming.gamestopdemo.TabFragment1;
 import com.example.jinming.gamestopdemo.TabFragment2;
@@ -16,10 +17,12 @@ import com.example.jinming.gamestopdemo.TabFragment3;
 public class PagerAdapter extends FragmentStatePagerAdapter {
     int numOfTabs;
     FragmentManager fragmentManager;
-    public PagerAdapter(FragmentManager fm, int n) {
+    View view;
+    public PagerAdapter(FragmentManager fm, int n, View view) {
         super(fm);
         this.numOfTabs = n;
-        fragmentManager = fm;
+        this.fragmentManager = fm;
+        this.view = view;
     }
 
     @Override
@@ -27,11 +30,8 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
         switch(position) {
             case 0:
                 Log.d("FRAGMENT", "tab1");
-//                if (fragmentManager.findFragmentByTag("tab1") == null) {
-//                    fragmentManager.beginTransaction().add(new TabFragment1(), "tab1").commit();
-//                }
-//                TabFragment1 tab1 = (TabFragment1) fragmentManager.findFragmentByTag("tab1");
                 TabFragment1 tab1 = new TabFragment1();
+                //fragmentManager.beginTransaction().add(tab1, "tab1").addToBackStack("TabFragment1").commit();
                 return tab1;
             case 1:
                 Log.d("FRAGMENT", "tab2");
@@ -40,7 +40,7 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
 //                }
 //                TabFragment2 tab2 = (TabFragment2) fragmentManager.findFragmentByTag("tab2");
                 TabFragment2 tab2 = new TabFragment2();
-
+                //fragmentManager.beginTransaction().add(tab2, "tab2").addToBackStack("TabFragment2").commit();
                 return tab2;
             case 2:
                 Log.d("FRAGMENT", "tab3");
@@ -49,6 +49,7 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
 //                }
 //                TabFragment3 tab3 = (TabFragment3) fragmentManager.findFragmentByTag("tab3");
                 TabFragment3 tab3 = new TabFragment3();
+                //fragmentManager.beginTransaction().add(tab3, "tab3").addToBackStack("TabFragment3").commit();
                 return tab3;
             default:
                 return null;

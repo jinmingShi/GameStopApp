@@ -4,17 +4,19 @@
 
     <item android:id="@+id/icon_placeholder"
         android:icon="@drawable/placeholder"
-        app:showAsAction="ifRoom"
+        app:showAsAction="always"
         android:title="@string/action_remove"/>
 
-    <item android:id="@+id/icon_cart"
+    <item
+        android:actionLayout="@layout/actionbar_badge_layout"
+        android:id="@+id/icon_cart"
         android:icon="@drawable/cart"
-        app:showAsAction="ifRoom"
+        app:showAsAction="always"
         android:title="@string/action_remove"/>
 
 
     <item android:id="@+id/icon_search"
-        app:showAsAction="ifRoom"
+        app:showAsAction="always"
         android:icon="@drawable/icon_search"
         android:title="@string/action_setting" />
 </menu>
